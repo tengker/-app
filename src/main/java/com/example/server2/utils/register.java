@@ -26,11 +26,11 @@ public class register {
 
     public static String sendSms(String phoneNumber) throws Exception {
         // 工程代码泄露可能会导致AccessKey泄露，并威胁账号下所有资源的安全性。以下代码示例仅供参考，建议使用更安全的 STS 方式，更多鉴权访问方式请参见：https://help.aliyun.com/document_detail/378657.html
-        com.aliyun.dysmsapi20170525.Client client = register.createClient("LTAI5tLi2ZZkuCkd1XGxFNzY", "yQifNX6Xp8PUnVxZjK2kTPg2cBP5io");
+        com.aliyun.dysmsapi20170525.Client client = register.createClient("你的accessKeyId", "你的accessKeySecret");
         com.aliyun.dysmsapi20170525.models.SendSmsRequest sendSmsRequest = new com.aliyun.dysmsapi20170525.models.SendSmsRequest();
         sendSmsRequest.setPhoneNumbers(phoneNumber);
-        sendSmsRequest.setSignName("刘佳腾的博客");
-        sendSmsRequest.setTemplateCode("SMS_276357062");
+        sendSmsRequest.setSignName("..的app");
+        sendSmsRequest.setTemplateCode("模板代码");
         Random random = new Random();
         String result="";
         for (int i=0;i<6;i++)
