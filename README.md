@@ -1,2 +1,3 @@
 # app
 毕设，vue+springboot+mysql，应用paddle将深度学习模型嵌入后端以使用，这是后端
+使用了paddle的stylepro_artistic 、chinese_ocr_db_crnn_mobile、、Photo2CartoonPredictor实现图像风格迁移、ocr和头像卡通化
