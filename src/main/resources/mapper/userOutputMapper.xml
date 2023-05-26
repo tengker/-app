@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+以下语句可以这样理解：
+    在org.test.mybatis的包下有一个接口类：userMapper
+    然后里面有一个方法：selectUser，且该方法暂时没有放置参数，当sql语句带有条件时可以添加参数进行sql条件查询，该方法的返回值是User类型的数据
+namespace处就填写userMapper的全文称路径（好像是叫这个名）
+-->
+<mapper namespace="com.example.server2.mapper.userOutputMapper">
+    <update id="updatePath">
+        update useroutput set path = #{path} where account=#{account}
+    </update>
+    <select id="queryPath" resultType="com.example.server2.entity.userOutput">
+        select * from useroutput where account=#{account}
+    </select>
+</mapper>
